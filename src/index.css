@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #F59E0B;
+  --primary-light: #FCD34D;
+  --primary-dark: #D97706;
+  --secondary: #65A30D;
+  --secondary-light: #A3E635;
+  --secondary-dark: #4D7C0F;
+  --accent: #92400E;
+  --accent-light: #B45309;
+  --neutral-light: #FFFBEB;
+  --neutral-dark: #1F2937;
+  --success: #10B981;
+  --warning: #F59E0B;
+  --error: #EF4444;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  @apply bg-amber-50;
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 font-medium rounded-lg transition-all duration-200 text-center;
+  }
+  
+  .btn-primary {
+    @apply bg-amber-500 hover:bg-amber-600 text-white shadow-md hover:shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply bg-green-600 hover:bg-green-700 text-white shadow-md hover:shadow-lg;
+  }
+  
+  .btn-accent {
+    @apply bg-amber-800 hover:bg-amber-900 text-white shadow-md hover:shadow-lg;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-amber-500 text-amber-600 hover:bg-amber-500 hover:text-white;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-md p-6;
+  }
+  
+  .input {
+    @apply w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent;
+  }
+  
+  .badge {
+    @apply px-3 py-1 rounded-full text-sm font-medium;
+  }
+  
+  .badge-pending {
+    @apply bg-amber-100 text-amber-800;
+  }
+  
+  .badge-preparing {
+    @apply bg-blue-100 text-blue-800;
+  }
+  
+  .badge-ready {
+    @apply bg-green-100 text-green-800;
+  }
+}
